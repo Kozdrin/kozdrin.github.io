@@ -56,5 +56,19 @@
             </a>
         </div>
     </div>
+    <button class="back-to-top">Наверх</button>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const backToTopButton = document.querySelector('.back-to-top');
+    
+        backToTopButton.addEventListener('click', function() {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        });
+      });
+    </script>
 </body>
 </html>
