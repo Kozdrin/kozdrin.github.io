@@ -1,121 +1,122 @@
 *,
 ::before,
 ::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    font-family: "Montserrat", sans-serif;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
 }
 
 img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 h1,
 h2,
 h3 {
-    margin: 0;
+  margin: 0;
 }
 
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    background-color: #fff;
-    display: flex; /* Добавлено */
-    justify-content: space-between; /* Добавлено */
-    padding: 15px 0;
-    text-align: center;
-    font-size: 28px;
-    font-weight: 300;
-    color: rgb(15, 15, 15);
-  }
+  position: -webkit-sticky; /* Для Safari */
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 300;
+  color: rgb(15, 15, 15);
+}
 
 .header_logo {
-    color: inherit;
-    text-decoration: none;
-    flex-grow: 1;
+  color: inherit;
+  text-decoration: none;
+  flex-grow: 1;
 }
 .hero {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 60px; /* Добавлен отступ сверху, чтобы компенсировать закрепленный header */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 60px; /* Добавлен отступ сверху, чтобы компенсировать закрепленный header */
 }
 
 .container {
-    max-width: 1230px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 15px;
+  max-width: 1230px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 .hero_container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-    grid-gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  grid-gap: 20px;
 }
 
 .hero_about {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .hero_title {
-    margin-bottom: 20px;
-    font-size: 48px;
-    line-height: 1.1;
+  margin-bottom: 20px;
+  font-size: 48px;
+  line-height: 1.1;
 }
 .hero_subtitle {
-    font-size: 32px;
-    font-weight: 400;
+  font-size: 32px;
+  font-weight: 400;
 }
 .hero_links {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .hero_link {
-    margin-right: 10px;
-    font-size: 30px;
-    color: black;
-    transition: color 0.3s;
+  margin-right: 10px;
+  font-size: 30px;
+  color: black;
+  transition: color 0.3s;
 }
 
 .hero_link:hover {
-    color: aqua;
+  color: aqua;
 }
 
 .hero_box {
-    max-width: 500px;
-    justify-self: center;
-    overflow: hidden;
-    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
-    border: 10px solid #fff;
-    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
-    animation: ava-animate 5s infinite alternate;
+  max-width: 500px;
+  justify-self: center;
+  overflow: hidden;
+  background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+  border: 10px solid #fff;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+  animation: ava-animate 5s infinite alternate;
 }
 .hero_box .img {
-    animation: ava-bg 3s infinite alternate;
+  animation: ava-bg 3s infinite alternate;
 }
 
 /* Добавленные стили для разделов */
 .section {
-    padding: 60px 15px 15px; /* Добавлен отступ сверху, равный высоте header */
-  }
+  padding: 60px 15px 15px; /* Добавлен отступ сверху, равный высоте header */
+}
 .section_title {
-    font-size: 36px;
-    font-weight: 700;
-    color: #000;
-    text-align: center;
-    margin-bottom: 20px;
+  font-size: 36px;
+  font-weight: 700;
+  color: #000;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 /* Добавленные стили для footer */
@@ -130,88 +131,91 @@ h3 {
 }
 
 .back-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    cursor: pointer;
-    opacity: 0.6;
-    transition: opacity 0.3s ease;
-  }
-  
-  .back-to-top:hover {
-    opacity: 1;
-  }
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.back-to-top:hover {
+  opacity: 1;
+}
 
 @media screen and (max-width: 978px) {
-    .hero {
-        padding-top: 20px;
-    }
-    .hero_container {
-        grid-row-gap: 20px;
-    }
-    .hero_title {
-        font-size: 28px;
-        margin-bottom: 10px;
-    }
-    .hero_subtitle {
-        font-size: 22px;
-        font-weight: 400;
-    }
-    .hero_description {
-        font-size: 14px;
-    }
-    .hero_about {
-        text-align: center;
-    }
-    .hero_links {
-        justify-content: center;
-    }
-    .hero_box {
-        max-width: 350px;
-    }
+  .hero {
+    padding-top: 20px;
+  }
+  .hero_container {
+    grid-row-gap: 20px;
+  }
+  .hero_title {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  .hero_subtitle {
+    font-size: 22px;
+    font-weight: 400;
+  }
+  .hero_description {
+    font-size: 14px;
+  }
+  .hero_about {
+    text-align: center;
+  }
+  .hero_links {
+    justify-content: center;
+  }
+  .hero_box {
+    max-width: 350px;
+  }
 }
 
 @media screen and (max-width: 768px) {
-    .header {
-      flex-direction: column;
-      padding: 15px;
-    }
-  
-    .header_logo {
-      text-align: center;
-      margin-bottom: 10px;
-    }
+  .header {
+    flex-direction: column;
+    padding: 15px;
   }
-  
+  .hero {
+    padding-top: 80px; /* Высота хедера */
+  }
+
+  .header_logo {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
+
 @keyframes ava-animate {
-    0% {
-        border-radius: 43% 57% 49% 51% / 85% 17% 83% 15% ;
-    }
-    40% {
-        border-radius: 56% 44% 59% 41% / 70% 40% 60% 30% ;
-    }
-    60% {
-        border-radius: 70% 30% 70% 30% / 45% 57% 43% 55% ;
-    }
-    100% {
-        border-radius: 24% 76% 21% 79% / 80% 20% 80% 20% ;
-    }
+  0% {
+    border-radius: 43% 57% 49% 51% / 85% 17% 83% 15%;
+  }
+  40% {
+    border-radius: 56% 44% 59% 41% / 70% 40% 60% 30%;
+  }
+  60% {
+    border-radius: 70% 30% 70% 30% / 45% 57% 43% 55%;
+  }
+  100% {
+    border-radius: 24% 76% 21% 79% / 80% 20% 80% 20%;
+  }
 }
 @keyframes ava-bg {
-    from {
-        backdrop-filter: hue-rotate(0);
-    }
-    to {
-        backdrop-filter: hue-rotate(360deg);
-    }
+  from {
+    backdrop-filter: hue-rotate(0);
+  }
+  to {
+    backdrop-filter: hue-rotate(360deg);
+  }
 }
