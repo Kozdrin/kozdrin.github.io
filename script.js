@@ -1,15 +1,18 @@
-const educationImageLink = document.querySelector('.education-image-link');
-const educationImage = document.querySelector('.education-image');
-let scrollPosition = 0;
+const educationImageLinks = document.querySelectorAll('.education-image-link');
+const educationImages = document.querySelectorAll('.education-image');
 
-educationImageLink.addEventListener('click', (event) => {
-  event.preventDefault();
+educationImageLinks.forEach((link, index) => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault();
 
-  if (document.body.classList.contains('education-image_fullscreen')) {
-    document.body.classList.remove('education-image_fullscreen');
-    window.scrollTo({top: scrollPosition, left: 0});
-  } else {
-    scrollPosition = window.pageYOffset;
-    document.body.classList.add('education-image_fullscreen');
-  }
+    const scrollPosition = window.pageYOffset;
+    const image = educationImages[index];
+
+    document.body.classList.toggle('education-image_fullscreen');
+    image.classList.toggle('education-image_fullscreen');
+
+    if (!document.body.classList.contains('education-image_fullscreen')) {
+      window.scrollTo({top: scrollPosition, left: 0});
+    }
+  });
 });
