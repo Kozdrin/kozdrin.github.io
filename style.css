@@ -32,7 +32,7 @@ h3 {
   justify-content: space-between;
   padding: 15px 0;
   text-align: center;
-  font-size: 28px;
+  font-size: 20px;
   font-weight: 300;
   color: rgb(15, 15, 15);
 }
@@ -94,12 +94,12 @@ h3 {
     display: flex;
     align-items: center;
   }
-  
+
   .education-text {
     text-align: center;
     margin-left: 20px;
   }
-  
+
   .section img {
     max-width: 100px; /* Ширина изображения */
     max-height: 100px; /* Высота изображения */
@@ -124,7 +124,9 @@ h3 {
 
 /* Добавленные стили для разделов */
 .section {
-  padding: 60px 15px 15px; /* Добавлен отступ сверху, равный высоте header */
+  padding: 60px 15px; /* Добавлен отступ сверху, равный высоте header */
+  padding-left: 10%; /* Добавлен отступ слева */
+  padding-right: 10%; /* Добавлен отступ справа */
 }
 .section_title {
   font-size: 36px;
@@ -136,14 +138,15 @@ h3 {
 
 /* Добавленные стили для footer */
 .footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: #fff;
-  padding: 15px;
-  text-align: center;
-}
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    padding: 15px;
+    text-align: center;
+    z-index: 100; /* Добавлено */
+  }
 
 .back-to-top {
   position: fixed;
@@ -173,7 +176,7 @@ h3 {
     cursor: pointer;
     transition: transform .3s;
   }
-  
+
   .education-image_fullscreen {
     position: fixed;
     top: 0;
@@ -185,7 +188,7 @@ h3 {
     overflow: auto;
     scroll-behavior: smooth;
   }
-  
+
   .education-image_fullscreen .education-image {
     max-width: none;
     max-height: 100vh; /* добавлено */
@@ -197,9 +200,20 @@ h3 {
     left: 50%;
     transform: translate(-50%, -50%);
   }
-  
-  
-  
+
+  .links {
+    display: flex;
+    align-items: center;
+  }
+
+  .links a {
+    margin-right: 10px;
+  }
+
+#projects {
+  margin-bottom: 60px; /* Высота footer */
+}
+
 @media screen and (max-width: 768px) {
     .education-image {
       max-width: 100%;
